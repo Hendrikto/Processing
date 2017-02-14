@@ -23,7 +23,11 @@ class Particle {
   }
 
   Particle(int mass) {
-    this((int) random(width), (int) random(height), mass);
+    this(
+      (int) random(width / 2) + width / 4
+      , (int) random(height / 2) + height / 4
+      , mass
+      );
   }
 
   void addAttractor(Particle p) {
