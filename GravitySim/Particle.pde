@@ -2,7 +2,7 @@
  * @author: Hendrik Werner
  */
 
-final float G = .1;
+final float G = .01;
 
 class Particle {
   final int mass;
