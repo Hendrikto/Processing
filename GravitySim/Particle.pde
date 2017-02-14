@@ -11,6 +11,8 @@ class Particle {
   final PVector velocity;
   final PVector acceleration;
 
+  color col = color(255);
+
   final ArrayList<Particle> attractors = new ArrayList<Particle>();
 
   Particle(int x, int y, int mass) {
@@ -39,6 +41,7 @@ class Particle {
   }
 
   void show() {
+    stroke(col);
     strokeWeight(mass);
     point(position.x, position.y);
   }

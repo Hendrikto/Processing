@@ -19,6 +19,7 @@ void setup() {
   size(800, 800);
   background(0);
   particles.add(new Particle(width / 2, height / 2, 10)); // Sun
+  particles.get(0).col = color(255, 255, 0);
   for (int i = 1; i < nrParticles; i++) {
     particles.add(new Particle(1 + (int) random(5)));
   }
@@ -29,7 +30,6 @@ void setup() {
 
 void draw() {
   background(0);
-  stroke(255);
   for (Particle p : particles) {
     p.update();
     p.show();
