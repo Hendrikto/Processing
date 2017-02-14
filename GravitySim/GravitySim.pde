@@ -2,7 +2,7 @@
  * @author: Hendrik Werner
  */
 
-ArrayList<Particle> particles = new ArrayList<Particle>();
+final ArrayList<Particle> particles = new ArrayList<Particle>();
 int nrParticles = 1;
 
 void connect(int i) {
