@@ -3,7 +3,7 @@
  */
 
 ArrayList<Particle> particles = new ArrayList<Particle>();
-final int nrParticles = 5;
+int nrParticles = 1;
 
 void connect(int i) {
   Particle p = particles.get(i);
@@ -14,6 +14,14 @@ void connect(int i) {
   }
 }
 
+void mouseClicked() {
+  Particle p = new Particle(mouseX, mouseY, 1 + (int) random(5));
+  particles.add(p);
+  for (int i = 1; i < nrParticles; i++) {
+    particles.get(i).addAttractor(p);
+  }
+  connect(nrParticles++);
+}
 
 void setup() {
   size(800, 800);
