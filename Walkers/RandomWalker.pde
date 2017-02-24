@@ -12,5 +12,7 @@ class RandomWalker extends Walker {
 
   void update() {
     position.add(PVector.random2D());
+    position.x = (position.x + width) % width;
+    position.y = (position.y + height) % height;
   }
 }
