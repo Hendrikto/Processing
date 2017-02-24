@@ -1,9 +1,7 @@
-class RandomWalker implements Walker {
-  final color col;
-  final PVector position = new PVector();
+class RandomWalker extends Walker {
 
   RandomWalker(color c, int x, int y) {
-    col = c;
+    super(c);
     position.x = x;
     position.y = y;
   }
@@ -14,10 +12,5 @@ class RandomWalker implements Walker {
 
   void update() {
     position.add(PVector.random2D());
-  }
-
-  void draw() {
-    stroke(col);
-    point(position.x, position.y);
   }
 }

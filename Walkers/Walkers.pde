@@ -21,7 +21,18 @@ void mouseClicked() {
   ));
 }
 
-interface Walker {
-  void update();
-  void draw();
+abstract class Walker {
+  final color col;
+  final PVector position = new PVector();
+
+  protected Walker(color c) {
+    col = c;
+  }
+
+  abstract void update();
+
+  void draw() {
+    stroke(col);
+    point(position.x, position.y);
+  }
 }
