@@ -20,6 +20,13 @@ void mouseClicked() {
   ));
 }
 
+void keyPressed() {
+  switch (key) {
+    case 'c':
+      background(0);
+      break;
+}
+
 abstract class Walker {
   final color col;
   final PVector position = new PVector();
