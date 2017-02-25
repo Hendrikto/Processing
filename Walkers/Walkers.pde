@@ -1,4 +1,3 @@
-final int nrWalkers = 1;
 final ArrayList<Walker> walkers = new ArrayList<Walker>();
 
 void setup() {
