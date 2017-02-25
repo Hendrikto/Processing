@@ -39,7 +39,8 @@ void setup() {
 void draw() {
   background(0);
   for (Particle p : particles) {
-    p.update();
+    p.updateVelocity();
+    p.updatePosition();
     p.show();
   }
 }

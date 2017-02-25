@@ -34,13 +34,16 @@ class Particle {
     attractors.add(p);
   }
 
-  void update() {
+  void updateVelocity() {
     acceleration.set(0, 0);
     for (Particle attractor : attractors) {
       PVector path = attractor.position.copy().sub(position);
       acceleration.add(path.normalize().mult(G * mass * attractor.mass / path.magSq()));
     }
     velocity.add(acceleration.div(mass));
+  }
+
+  void updatePosition() {
     position.add(velocity);
   }
 
