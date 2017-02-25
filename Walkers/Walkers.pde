@@ -2,7 +2,7 @@ final ArrayList<Walker> walkers = new ArrayList<Walker>();
 
 void setup() {
   size(800, 800);
-  background(255);
+  background(0);
 }
 
 void draw() {
