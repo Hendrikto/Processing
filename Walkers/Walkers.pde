@@ -35,4 +35,9 @@ abstract class Walker {
     stroke(col);
     point(position.x, position.y);
   }
+
+  protected void constrainPosition() {
+    position.x = ((position.x % width) + width) % width;
+    position.y = ((position.y % height) + height) % height;
+  }
 }
