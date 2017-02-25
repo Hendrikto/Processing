@@ -2,8 +2,7 @@ class RandomWalker extends Walker {
 
   RandomWalker(color c, int x, int y) {
     super(c);
-    position.x = x;
-    position.y = y;
+    position.set(x, y);
   }
 
   RandomWalker(color c) {
