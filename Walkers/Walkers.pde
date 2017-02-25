@@ -25,6 +25,10 @@ void keyPressed() {
     case 'c':
       background(0);
       break;
+    case 'e':
+      walkers.clear();
+      break;
+  }
 }
 
 abstract class Walker {
