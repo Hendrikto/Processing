@@ -1,23 +1,27 @@
 final ArrayList<Walker> walkers = new ArrayList<Walker>();
 
 void setup() {
-  size(800, 800);
+  size(800, 800, P2D);
+  //fullScreen(P2D);
   background(0);
 }
 
 void draw() {
   for (Walker w : walkers) {
-    w.update();
-    w.draw();
+    for (int i = 0; i < 100; i++) {
+      w.update();
+      w.draw();
+    }
   }
 }
 
 void mouseClicked() {
-  walkers.add(new RandomWalker(
-    color(random(255), random(255), random(255))
-    , mouseX
-    , mouseY
-  ));
+  color c = color(random(255), random(255), random(255));
+  if (mouseButton == RIGHT) {
+    walkers.add(new RandomWalker(c, mouseX, mouseY));
+  } else {
+    walkers.add(new VelocityWalker(c, mouseX, mouseY));
+  }
 }
 
 void keyPressed() {
