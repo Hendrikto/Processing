@@ -10,8 +10,8 @@ void setup() {
 void draw() {
   background(0);
   translate(width/2, height/2, -100);
-  rotateX((mouseX / 100.0) + rotX);
-  rotateY((mouseY / 100.0) + rotY);
+  rotateX((mouseY / 100.0) + rotX);
+  rotateY((mouseX / 100.0) + rotY);
   rotX += .01;
   rotY += .01;
   for (Walker w : walkers) {
