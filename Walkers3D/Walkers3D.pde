@@ -25,6 +25,14 @@ void mouseClicked() {
   walkers.add(new RandomWalker(c));
 }
 
+void keyPressed() {
+  switch (key) {
+    case 'e':
+      walkers.clear();
+      break;
+  }
+}
+
 abstract class Walker {
   final color col;
   final ArrayList<float[]> positions = new ArrayList<float[]>();
