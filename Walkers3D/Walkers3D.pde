@@ -27,7 +27,7 @@ void mouseClicked() {
 
 abstract class Walker {
   final color col;
-  final ArrayList<PVector> positions = new ArrayList<PVector>();
+  final ArrayList<float[]> positions = new ArrayList<float[]>();
   final PVector position = new PVector();
 
   protected Walker(color c) {
@@ -41,8 +41,8 @@ abstract class Walker {
     noFill();
     beginShape();
     vertex(0, 0, 0);
-    for (PVector p : positions) {
-      vertex(p.x, p.y, p.z);
+    for (float[] p : positions) {
+      vertex(p[0], p[1], p[2]);
     }
     endShape();
   }

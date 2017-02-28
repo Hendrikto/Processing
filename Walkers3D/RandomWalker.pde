@@ -11,6 +11,6 @@ class RandomWalker extends Walker {
 
   void update() {
     position.add(PVector.random3D());
-    positions.add(position.copy());
+    positions.add(position.array().clone());
   }
 }
