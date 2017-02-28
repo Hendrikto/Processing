@@ -40,7 +40,6 @@ abstract class Walker {
     stroke(col);
     noFill();
     beginShape();
-    vertex(0, 0, 0);
     for (float[] p : positions) {
       vertex(p[0], p[1], p[2]);
     }

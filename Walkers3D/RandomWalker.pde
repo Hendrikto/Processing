@@ -3,6 +3,7 @@ class RandomWalker extends Walker {
   RandomWalker(color c, int x, int y, int z) {
     super(c);
     position.set(x, y, z);
+    positions.add(position.array().clone());
   }
 
   RandomWalker(color c) {
