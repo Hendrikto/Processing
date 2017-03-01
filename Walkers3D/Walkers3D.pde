@@ -12,8 +12,8 @@ void draw() {
   translate(width/2, height/2, -100);
   rotateX((mouseY / 100.0) + rotX);
   rotateY((mouseX / 100.0) + rotY);
-  rotX += .01;
-  rotY += .01;
+  rotX = (rotX + .01) % TWO_PI;
+  rotY = (rotY + .01) % TWO_PI;
   for (Walker w : walkers) {
     w.update();
     w.draw();
