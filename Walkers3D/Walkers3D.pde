@@ -30,6 +30,15 @@ void keyPressed() {
     case 'e':
       walkers.clear();
       break;
+    case 'c':
+      clearPaths();
+      break;
+  }
+}
+
+void clearPaths() {
+  for (Walker w : walkers) {
+    w.clearPath();
   }
 }
 
@@ -52,5 +61,9 @@ abstract class Walker {
       vertex(p[0], p[1], p[2]);
     }
     endShape();
+  }
+
+  void clearPath() {
+    positions.clear();
   }
 }
