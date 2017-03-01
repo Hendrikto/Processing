@@ -4,6 +4,7 @@ class VelocityWalker extends Walker {
 
   VelocityWalker(color c) {
     super(c);
+    positions.add(position.array().clone());
   }
 
   void update() {
