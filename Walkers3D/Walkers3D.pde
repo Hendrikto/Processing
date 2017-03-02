@@ -2,6 +2,7 @@ final ArrayList<Walker> walkers = new ArrayList<Walker>();
 
 float rotX = 0;
 float rotY = 0;
+int z;
 
 void setup() {
   size(800, 800, P3D);
@@ -9,7 +10,7 @@ void setup() {
 
 void draw() {
   background(0);
-  translate(width/2, height/2, -100);
+  translate(width/2, height/2, z);
   rotateX((mouseY * TWO_PI / height) + rotX);
   rotateY((mouseX * TWO_PI / width) + rotY);
   rotX = (rotX + .01) % TWO_PI;
@@ -23,6 +24,10 @@ void draw() {
 void mouseClicked() {
   color c = color(random(255), random(255), random(255));
   walkers.add(new RandomWalker(c));
+}
+
+void mouseWheel(MouseEvent e) {
+  z += e.getCount() * -10;
 }
 
 void keyPressed() {
